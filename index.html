@@ -1,11 +1,14 @@
-raza-electrical/
- ├─ index.html
- └─ style.css
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Raza Electrical Services</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Raza Electrical Services - House wiring, industrial electrical work, inverter & UPS installation. Trusted electrician in India.">
+  <meta name="keywords" content="Electrician, Electrical Services, House Wiring, Industrial Wiring">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +16,7 @@ raza-electrical/
   <!-- Header -->
   <header>
     <h1>Raza Electrical Services</h1>
-    <p>Professional & Trusted Electrical Solutions</p>
+    <p>Reliable & Professional Electrical Solutions</p>
   </header>
 
   <!-- Navigation -->
@@ -24,40 +27,56 @@ raza-electrical/
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero" id="home">
-    <h2>We Provide Best Electrical Services</h2>
-    <p>Home • Office • Industrial Electrical Work</p>
-    <button>Call Now</button>
-  </section>
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h2>Expert Electrical Services You Can Trust</h2>
+      <p>Home • Office • Industrial Work</p>
+
+      <a href="tel:+919771303958"><button>📞 Call Now</button></a>
+      <a href="https://wa.me/919771303958" target="_blank">
+        <button class="whatsapp">💬 WhatsApp</button>
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img src="electrician.jpg" alt="Electrical Service">
+    </div>
+
+  </div>
+</section>
 
   <!-- Services -->
   <section class="services" id="services">
     <h2>Our Services</h2>
 
-    <div class="service-box">
-      <h3>House Wiring</h3>
-      <p>Complete & safe house electrical wiring.</p>
-    </div>
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>🏠 House Wiring</h3>
+        <p>Safe & complete house electrical wiring.</p>
+      </div>
 
-    <div class="service-box">
-      <h3>Fan & Light Installation</h3>
-      <p>All types of fan, light & fitting work.</p>
-    </div>
+      <div class="service-box">
+        <h3>💡 Fan & Light Installation</h3>
+        <p>All types of lighting & fitting work.</p>
+      </div>
 
-    <div class="service-box">
-      <h3>Inverter & UPS</h3>
-      <p>Inverter, UPS installation & repair.</p>
-    </div>
+      <div class="service-box">
+        <h3>🔌 Inverter & UPS</h3>
+        <p>Installation & repair of inverter and UPS.</p>
+      </div>
 
-    <div class="service-box">
-      <h3>Electrical Repair</h3>
-      <p>Short circuit, fuse, switch repair.</p>
-    </div>
+      <div class="service-box">
+        <h3>⚡ Electrical Repair</h3>
+        <p>Short circuit, fuse & switch repair.</p>
+      </div>
 
-    <div class="service-box">
-        <h4>Inductrial wiring</h4>
-        <p>All type of Inductrial wiring.</p>
+      <div class="service-box">
+        <h3>🏭 Industrial Wiring</h3>
+        <p>All types of industrial electrical wiring.</p>
+      </div>
     </div>
   </section>
 
@@ -65,10 +84,17 @@ raza-electrical/
   <section class="about" id="about">
     <h2>About Us</h2>
     <p>
-      Raza Electrical Services is a trusted name in electrical work.
-      We provide safe, affordable and professional electrical solutions
-      with years of experience.
+      Raza Electrical Services is a trusted name with 10+ years of experience
+      in residential, commercial and industrial electrical work.
+      Safety, quality and customer satisfaction are our top priorities.
     </p>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews">
+    <h2>Customer Reviews</h2>
+    <p>⭐⭐⭐⭐⭐ Excellent service and on-time work – A. Khan</p>
+    <p>⭐⭐⭐⭐⭐ Very professional and affordable – R. Sharma</p>
   </section>
 
   <!-- Contact -->
@@ -100,16 +126,15 @@ body {
 /* Header */
 header {
   background: #ffb300;
-  color: #000;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
 }
 
 /* Navbar */
 nav {
   background: #222;
-  padding: 10px;
   text-align: center;
+  padding: 12px;
 }
 
 nav a {
@@ -127,34 +152,52 @@ nav a:hover {
 .hero {
   background: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
 }
 
 .hero button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ffb300;
+  padding: 12px 20px;
+  margin: 5px;
   border: none;
-  font-size: 16px;
   cursor: pointer;
+  font-size: 16px;
+  background: #ffb300;
 }
 
 .hero button:hover {
   background: #e0a800;
 }
 
+.whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.whatsapp:hover {
+  background: #1ebe5d;
+}
+
 /* Services */
 .services {
-  padding: 30px;
+  padding: 40px 20px;
   background: #fdfdfd;
   text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
 }
 
 .service-box {
   background: #fff;
   padding: 20px;
-  margin: 15px auto;
-  max-width: 400px;
   border-left: 5px solid #ffb300;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -162,6 +205,13 @@ nav a:hover {
 /* About */
 .about {
   background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Reviews */
+.reviews {
+  background: #fffbf0;
   padding: 30px;
   text-align: center;
 }
@@ -170,7 +220,7 @@ nav a:hover {
 .contact {
   background: #222;
   color: #fff;
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -179,5 +229,5 @@ footer {
   background: #000;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
 }
